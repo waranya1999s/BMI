@@ -35,7 +35,7 @@ if st.button('คำนวณ'):
         
     else:
         st.error(tt)
-
+        st.text()
 
     payload = {
         "text": word,
