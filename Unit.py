@@ -21,17 +21,17 @@ if st.button('คำนวณ'):
     tt = f'ค่า BMI ของคุณคือ {bmi:.2f}'
     if bmi < 18.50:
         st.info(tt)
-        st.image('image1.PNG')
+        st.image('image1.png')
         word='ผอมเกินไป'
 
     elif bmi < 24.9:
         st.success(tt)
-        st.image('image2.PNG')
+        st.image('image2.png')
         word='ปกติ'
         
     elif bmi < 29.90:
         st.warning(tt)
-        st.image('image3.PNG')
+        st.image('image3.png')
         
     else:
         st.error(tt)
