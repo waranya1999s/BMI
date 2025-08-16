@@ -34,6 +34,9 @@ if st.button('คำนวณ'):
         st.image('image3.png')
         word='อ้วนนนน'
         
+    elif bmi == 0
+        st.text( )
+    
     else:
         st.error(tt)
 
