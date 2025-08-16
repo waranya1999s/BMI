@@ -27,15 +27,15 @@ if st.button('คำนวณ'):
     elif bmi < 24.9:
         st.success(tt)
         st.image('image2.png')
-        word='ปกติ'
+        word='ปกติจ้า'
         
     elif bmi < 29.90:
         st.warning(tt)
         st.image('image3.png')
+        word='อ้วนนนน'
         
     else:
         st.error(tt)
-        st.text()
 
     payload = {
         "text": word,
