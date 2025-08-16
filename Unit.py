@@ -15,7 +15,6 @@ st.image('bmi1.jpg')
 kg=st.number_input('นํ้าหนัก (Kg):')
 cm=st.number_input('ส่วนสูง (Cm):')
 
-from gtts import gTTS
 import io
 if st.button('คำนวณ'):
     bmi=kg/(cm/100)**2
