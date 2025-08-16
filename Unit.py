@@ -16,7 +16,7 @@ kg=st.number_input('นํ้าหนัก (Kg):')
 cm=st.number_input('ส่วนสูง (Cm):')
 
 import io
-if st.button('คำนวณ'):
+if st.button('คำนวณ') and cm > 10 :
     bmi=kg/(cm/100)**2
     tt = f'ค่า BMI ของคุณคือ {bmi:.2f}'
     if bmi < 18.50:
@@ -34,8 +34,7 @@ if st.button('คำนวณ'):
         st.image('image3.png')
         word='อ้วนนนน'
         
-    elif bmi == 0:
-        st.text(  )
+
     
     else:
         st.error(tt)
