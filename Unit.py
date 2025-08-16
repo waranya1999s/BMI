@@ -32,8 +32,6 @@ if st.button('คำนวณ') and cm > 10 and kg > 10:
         st.image('image3.png')
         word='อ้วนนนน'
         
-
-    
     else:
         st.error(tt)
 
