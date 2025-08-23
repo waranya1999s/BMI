@@ -1,3 +1,20 @@
+def testAi(question):
+    from openai import OpenAI
+
+    client = OpenAI(api_key="key")
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",  
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": question}
+        ],
+        max_tokens=200
+    )
+
+    return(response.choices[0].message.content)
+
+
 import streamlit as st
 import requests
 from pathlib import Path
@@ -76,12 +93,12 @@ if st.button('คำนวณ') and cm > 10 and kg > 10:
 
     except Exception as e:
         st.error(f"เกิดข้อผิดพลาด: {e}")
-
-
-
-
-
         
+    q=st.empty()
+    q.write('กรุณารอสักครู่...')
+    question = f'บอกโรคที่อาจเกิดขึ้นกับคนที่มีค่า BMI นี้ และบอกวิธีฏิิบัติ '
+    q.write(testAi(question))
+
 col1,col2 = st.columns(2)
 with col1:
     if st.button('ฟังเพลง'):
