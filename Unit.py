@@ -1,7 +1,7 @@
 def testAi(question):
     from openai import OpenAI
 
-    client = OpenAI(api_key="key")
+    client = OpenAI(api_key="")
 
     response = client.chat.completions.create(
         model="gpt-4o-mini",  
