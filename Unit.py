@@ -1,7 +1,7 @@
 def testAi(question):
     from openai import OpenAI
 
-    client = OpenAI(api_key="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")
+    client = OpenAI(api_key="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")
 
     response = client.chat.completions.create(
         model="gpt-4o-mini",  
